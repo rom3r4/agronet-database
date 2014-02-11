@@ -2,6 +2,8 @@
 
 DATABASE_DIR=`pwd`
 AGRONET_DIR="/www/agronet"
+NGINX=`nginx -v`
+
 
 if [ ! -f $DATABASE_DIR/history.txt ];then
   echo "There should exist an history.txt file."
@@ -52,6 +54,12 @@ tmpdb() {
 
 echo "Saving database..."
 tmpdb
+
+if [ "x$NGINX" != "x" ];then
+  echo "restarting.."
+  service nginx restart
+fi
+
 exit 0;
 
 
