@@ -20,18 +20,14 @@ tmpdb() {
   fi
   
   echo "Disabling some modules (Memcache, Varnish, MongoDB) before packaging.."
-  drush pm-disable memcache
-  drush pm-disable varnish
-  drush pm-disable mongodb
+  drush -y pm-disable memcache varnish mongodb
   
   drush sql-dump --result-file=$AGRONET_DIR/tmp/agronet-db.sql 1>/dev/null
   tar -czvf $AGRONET_DIR/tmp/agronet-db.sql.tar $AGRONET_DIR/tmp/agronet-db.sql 1>/dev/null
   res=$?
 
   echo "Re-enabling optional services.."
-  drush en memcache
-  drush en varnish
-  drush en mongodb
+  drush -y en memcache varnish mongodb mongodb_field_storage mongodb_watchdog
 
   
   if [ $res -ne 0 ];then
