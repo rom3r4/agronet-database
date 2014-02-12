@@ -21,6 +21,8 @@ tmpdb() {
     mkdir tmp
   fi
   
+  echo "clening database cache tables.."
+  drush -y cc all
   echo "Disabling some modules (Memcache, Varnish, MongoDB) before packaging.."
   drush -y pm-disable memcache varnish mongodb
   
