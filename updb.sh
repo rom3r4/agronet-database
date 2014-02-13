@@ -20,8 +20,9 @@ tmpdb() {
   if [ ! -d ./tmp ];then
     mkdir tmp
   fi
-  
-  echo "clening database cache tables.."
+  echo "pre-disabling APC module.."
+  drush -y pm-disable apc
+  echo "cleaning database cache tables.."
   drush -y cc all
   echo "Disabling some modules (Memcache, Varnish, MongoDB) before packaging.."
   drush -y pm-disable memcache varnish mongodb
@@ -31,7 +32,7 @@ tmpdb() {
   res=$?
 
   echo "Re-enabling optional services.."
-  drush -y en memcache varnish mongodb mongodb_field_storage mongodb_watchdog
+  drush -y en memcache varnish mongodb mongodb_field_storage mongodb_watchdog apc
 
   
   if [ $res -ne 0 ];then
