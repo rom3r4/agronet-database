@@ -1,8 +1,14 @@
 #!/bin/bash
 
+if [ "x$1" = "x" ];then
+    echo "Basic Database-Version-Control-System (use git to roll back)"
+    echo "$0 <short message about the database changes>"
+    exit 1
+fi
+
 DATABASE_DIR=`pwd`
 AGRONET_DIR="/www/agronet"
-NGINX=`nginx -v`
+NGINX=`which nginx`
 
 
 if [ ! -f $DATABASE_DIR/history.txt ];then
@@ -47,7 +53,7 @@ tmpdb() {
   
   if [ $res -eq 0 ];then
     # updating database-update history
-    echo `date` >> $DATABASE_DIR/history.txt 
+    echo "`date` $1" >> $DATABASE_DIR/history.txt 
   else
     echo "unexpected error: permissions (?)"
     exit 1;
