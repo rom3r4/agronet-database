@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "x$1" = "x" ];then
-    echo "Basic Database-Version-Control-System (use git to roll back)"
+    echo "Basic Database Version-Control-System (use git to roll back)"
     echo "$0 <short message about the database changes>"
     exit 1
 fi
@@ -9,6 +9,7 @@ fi
 DATABASE_DIR=`pwd`
 AGRONET_DIR="/www/agronet"
 NGINX=`which nginx`
+GIT=`which git`
 
 
 if [ ! -f $DATABASE_DIR/history.txt ];then
@@ -62,12 +63,20 @@ tmpdb() {
 }
 
 echo "Saving database..."
-tmpdb
+tmpdb $1
+
+if [ "x$NGINX" != "x" ];then
+  echo "saving changes.."
+  git add .
+  git commit -am "$1"
+fi
 
 if [ "x$NGINX" != "x" ];then
   echo "restarting.."
   service nginx restart
 fi
+
+
 
 exit 0;
 
