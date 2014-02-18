@@ -8,5 +8,6 @@ fi
 
 sudo git add .
 sudo git commit -a -m "$1"
-sudo git pull origin master && sudo git push origin --all
+sudo git pull origin master 
+sudo git push origin --all
 
