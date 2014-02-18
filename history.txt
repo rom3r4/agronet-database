@@ -24,3 +24,4 @@ Sat Feb 15 03:43:58 CET 2014
 Mon Feb 17 06:38:31 CET 2014 
 Tue Feb 18 05:14:01 CET 2014 workarroung
 Tue Feb 18 05:32:36 CET 2014 updated
+Tue Feb 18 05:37:02 CET 2014 fixed updater bug

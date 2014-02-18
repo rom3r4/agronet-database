@@ -4,7 +4,11 @@ if [ "x$1" = "x" ];then
     echo "Basic Database Version-Control-System (use git to roll back)"
     echo "$0 <short message about the database changes>"
     exit 1
+else
+    message="$1"
 fi
+
+
 
 DATABASE_DIR=`pwd`
 AGRONET_DIR="/www/agronet"
@@ -54,7 +58,7 @@ tmpdb() {
   
   if [ $res -eq 0 ];then
     # updating database-update history
-    echo "`date` $1" >> $DATABASE_DIR/history.txt 
+    echo "`date` $message" >> $DATABASE_DIR/history.txt 
   else
     echo "unexpected error: permissions (?)"
     exit 1;
@@ -63,12 +67,13 @@ tmpdb() {
 }
 
 echo "Saving database..."
-tmpdb $1
+
+tmpdb
 
 if [ "x$NGINX" != "x" ];then
   echo "saving changes.."
   git add .
-  git commit -am "$1"
+  git commit -am "$message"
 fi
 
 if [ "x$NGINX" != "x" ];then
