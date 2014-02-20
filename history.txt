@@ -28,3 +28,4 @@ Tue Feb 18 05:37:02 CET 2014 fixed updater bug
 Wed Feb 19 06:34:24 CET 2014 removed all content from database. Un-indexed solar and recreated content. Looking for more info to fix the Blank screen issue
 Thu Feb 20 05:56:10 CET 2014 updating whole project
 Thu Feb 20 05:58:00 CET 2014 updating whole project
+Thu Feb 20 06:01:22 CET 2014 testing update-all script
