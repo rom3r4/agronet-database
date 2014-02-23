@@ -30,4 +30,9 @@ Thu Feb 20 05:56:10 CET 2014 updating whole project
 Thu Feb 20 05:58:00 CET 2014 updating whole project
 Thu Feb 20 06:01:22 CET 2014 testing update-all script
 Thu Feb 20 06:29:10 CET 2014 (tests) modified profile maker
+<<<<<<< HEAD
 Sun Feb 23 10:52:37 CET 2014 (updating): uploading agronet-harvester project
+=======
+Sun Feb 23 07:36:40 CET 2014 (fix): converted about us page to panel
+Sun Feb 23 07:58:00 CET 2014 (fix): about us page. removed content type; converted to panel
+>>>>>>> ed006046efbefaccc29add46952ea9e57b88d34c
