@@ -35,3 +35,4 @@ Sun Feb 23 07:58:00 CET 2014 (fix): about us page. removed content type; convert
 Tue Feb 25 07:06:05 CET 2014 (uis): changes
 Wed Feb 26 06:00:59 CET 2014 (fix): group permissions
 Thu Feb 27 07:34:32 CET 2014 (changes): added modules
+Fri Feb 28 07:50:37 CET 2014 (changes): changed some config. removed modules
