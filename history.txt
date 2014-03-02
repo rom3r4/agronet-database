@@ -37,3 +37,4 @@ Wed Feb 26 06:00:59 CET 2014 (fix): group permissions
 Thu Feb 27 07:34:32 CET 2014 (changes): added modules
 Fri Feb 28 07:50:37 CET 2014 (changes): changed some config. removed modules
 Sat Mar  1 07:42:12 CET 2014 (fixes): minor fixes. minor changes
+Sun Mar  2 07:53:49 CET 2014 (improvement): added rdf module in order to add the rdf metatags to each document / paper
