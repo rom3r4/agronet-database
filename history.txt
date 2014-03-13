@@ -30,13 +30,4 @@ Thu Feb 20 05:56:10 CET 2014 updating whole project
 Thu Feb 20 05:58:00 CET 2014 updating whole project
 Thu Feb 20 06:01:22 CET 2014 testing update-all script
 Thu Feb 20 06:29:10 CET 2014 (tests) modified profile maker
-Sun Feb 23 07:36:40 CET 2014 (fix): converted about us page to panel
-Sun Feb 23 07:58:00 CET 2014 (fix): about us page. removed content type; converted to panel
-Tue Feb 25 07:06:05 CET 2014 (uis): changes
-Wed Feb 26 06:00:59 CET 2014 (fix): group permissions
-Thu Feb 27 07:34:32 CET 2014 (changes): added modules
-Fri Feb 28 07:50:37 CET 2014 (changes): changed some config. removed modules
-Sat Mar  1 07:42:12 CET 2014 (fixes): minor fixes. minor changes
-Sun Mar  2 07:53:49 CET 2014 (improvement): added rdf module in order to add the rdf metatags to each document / paper
-Mon Mar  3 01:46:46 CET 2014 (changes): added fields on resource-dc and resource-agrisap content types. changes on views 
-Fri Mar 14 00:11:51 CET 2014 (changes): commiting changes
+Fri Mar 14 00:24:25 CET 2014 (merge): fixing conflicts
